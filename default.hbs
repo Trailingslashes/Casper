@@ -33,8 +33,6 @@
                     <a href="{{@blog.url}}">Latest Posts</a>
                     {{#if @blog.facebook}}<a href="{{facebook_url @blog.facebook}}" target="_blank" rel="noopener">Facebook</a>{{/if}}
                     {{#if @blog.twitter}}<a href="{{twitter_url @blog.twitter}}" target="_blank" rel="noopener">Twitter</a>{{/if}}
-                    <a href="https://www.linkedin.com/in/joeldeteves/" target="_blank" rel="noopener">LinkedIn</a>
-                    <a href="https://ghost.org" target="_blank" rel="noopener">Ghost</a>
                 </nav>
             </div>
         </footer>
@@ -55,6 +53,18 @@
         </div>
     </div>
     {{/if}}
+
+    <script>
+        var images = document.querySelectorAll('.kg-gallery-image img');
+        images.forEach(function (image) {
+            var container = image.closest('.kg-gallery-image');
+            var width = image.attributes.width.value;
+            var height = image.attributes.height.value;
+            var ratio = width / height;
+            container.style.flex = ratio + ' 1 0%';
+        })
+    </script>
+
 
     {{!-- jQuery + Fitvids, which makes all video embeds responsive --}}
     <script
