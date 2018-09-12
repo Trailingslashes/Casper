@@ -23,12 +23,12 @@
             onclick="window.open(this.href, 'share-linkedin','width=580,height=296');return false;">
             {{> "icons/linkedin"}}
         </a>
-            <a class="floating-header-share-li" href="https://github.com/Trailingslashes={{url absolute="true"}}"
+        <a class="floating-header-share-li" href="https://github.com/Trailingslashes={{url absolute="true"}}"
             onclick="window.open(this.href, 'share-github','width=580,height=296');return false;">
             {{> "icons/github"}}
-        </a>
+        </a>	
     </div>
-    <progress class="progress" value="0">
+    <progress id="reading-progress" class="progress" value="0">
         <div class="progress-container">
             <span class="progress-bar"></span>
         </div>
